@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shoping Cart</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Primary Meta Tags -->
+<title>CBIKES - shopping cart (Konstantyn Huzenko)</title>
+<meta name="title" content="CBIKES - shopping cart (Konstantyn Huzenko)">
+<meta name="description" content="My shopping cart development. Konstantyn Huzenko - Frontend Developer.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://metatags.io/">
+<meta property="og:title" content="CBIKES - shopping cart (Konstantyn Huzenko)">
+<meta property="og:description" content="My shopping cart development. Konstantyn Huzenko - Frontend Developer.">
+<meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://metatags.io/">
+<meta property="twitter:title" content="CBIKES - shopping cart (Konstantyn Huzenko)">
+<meta property="twitter:description" content="My shopping cart development. Konstantyn Huzenko - Frontend Developer.">
+<meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+</head>
+
+<body>
+    <div class="app-container pt-40">
+
+        <div class="top-cart">
+            <div class="top-cart__info">
+                <div class="top-cart-info__goods"></div>
+                <button class="btn-check">Order
+                <span class="top-cart-info__item">
+                    <span class="red-info">0</span> $</span>
+                </button>
+            </div>
+
+        </div><!-- /.top-cart -->
+
+
+
+        <header class="header">
+            <div class="container">
+                <h1 class="header__item">CBIKES-SHOP</h1>
+            </div>
+        </header>
+
+        <div class="wrap">
+            <section class="container">
+                <div class="filter-box">
+                    <div class="select-box">
+                        <div class="select-control">
+                            <input type="radio" name="Category" data-value-category="all" id="radio-all"
+                                class="category-control" checked>
+                            <label class="radio-control" for="radio-all">All</label><br>
+                            <input type="radio" name="Category" data-value-category="road" id="radio-road"
+                                class="category-control">
+                            <label class="radio-control" for="radio-road">Road</label><br>
+                            <input type="radio" name="Category" data-value-category="mountain" id="radio-mountain"
+                                class="category-control">
+                            <label class="radio-control" for="radio-mountain">Mountain</label><br>
+                            <input type="radio" name="Category" data-value-category="bmx" id="radio-bmx"
+                                class="category-control">
+                            <label class="radio-control" for="radio-bmx">BMX</label><br>
+                        </div>
+
+                    </div><!-- /.select-box -->
+                    <div class="price-select-box">
+                        <input type="range" min="0" max="3870" value="2850" class="price-control" data-filter='price'>
+                        <span class="price-value">price to <span class="price-value__item">3870</span>$</span>
+                    </div><!-- /.price-select-box -->
+                </div><!-- /filter-box-->
+
+
+
+                <div class="products-box grid-box">
+
+                    <div data-category='road' value="2850" class="product-box__item">
+                        <h3 class="product-box__title">Cano One</h3>
+                        <div class="product-box__img">
+                            <img class="img-fluid" src="i/im1-min.png">
+                        </div>
+                        <div class="product-box__meta">
+                            <p>2850 $</p><button class="product-box__btn">+</button>
+
+                        </div>
+                    </div>
+
+
+                    <div data-category='bmx' value="1620" class="product-box__item">
+                        <h3 class="product-box__title">Predator</h3>
+                        <div class="product-box__img">
+                            <img class="img-fluid" src="i/im12-min.png">
+                        </div>
+                        <div class="product-box__meta">
+                            <p>1620 $</p><button class="product-box__btn">+</button>
+
+                        </div>
+                    </div>
+
+                    <div data-category='mountain' value="780" class="product-box__item">
+                        <h3 class="product-box__title">Canyon</h3>
+                        <div class="product-box__img">
+                            <img class="img-fluid" src="i/im2-min.png">
+                        </div>
+                        <div class="product-box__meta">
+                            <p>780 $</p><button class="product-box__btn">+</button>
+
+                        </div>
+                    </div>
+                    <div data-category='road' value="1100" class="product-box__item">
+                        <h3 class="product-box__title">Coselo</h3>
+                        <div class="product-box__img">
+                            <img class="img-fluid" src="i/im3-min.png">
+                        </div>
+                        <div class="product-box__meta">
+                            <p>1100 $</p><button class="product-box__btn">+</button>
+
+                        </div>
+                    </div>
+                    <div data-category='mountain' value="450" class="product-box__item">
+                        <h3 class="product-box__title">Gt Cube</h3>
+                        <div class="product-box__img">
+                            <img class="img-fluid" src="i/im4-min.png">
+                        </div>
+                        <div class="product-box__meta">
+                            <p>450 $</p><button class="product-box__btn">+</button>
+
+                        </div>
+                    </div>
+                    <div data-category='road' value="600" class="product-box__item">
+                        <h3 class="product-box__title">Cube Axeal</h3>
+                        <div class="product-box__img">
+                            <img class="img-fluid" src="i/im5-min.png">
+                        </div>
+                        <div class="product-box__meta">
+                            <p>600 $</p><button class="product-box__btn">+</button>
+
+                        </div>
+                    </div>
+                    <div data-category='mountain' value="320" class="product-box__item">
+                        <h3 class="product-box__title">Gt 3000</h3>
+                        <div class="product-box__img">
+                            <img class="img-fluid" src="i/im7-min.png">
+                        </div>
+                        <div class="product-box__meta">
+                            <p>320 $</p><button class="product-box__btn">+</button>
+
+                        </div>
+                    </div>
+                    <div data-category='mountain' value="500" class="product-box__item">
+                        <h3 class="product-box__title">Gt One</h3>
+                        <div class="product-box__img">
+                            <img class="img-fluid" src="i/im8-min.png">
+                        </div>
+                        <div class="product-box__meta">
+                            <p>500 $</p><button class="product-box__btn">+</button>
+
+                        </div>
+                    </div>
+                    <div data-category='bmx' value="2200" class="product-box__item">
+                        <h3 class="product-box__title">Gt Perfomer</h3>
+                        <div class="product-box__img">
+                            <img class="img-fluid" src="i/im9-min.png">
+                        </div>
+                        <div class="product-box__meta">
+                            <p>2200 $</p><button class="product-box__btn">+</button>
+
+                        </div>
+                    </div>
+                    <div data-category='mountain' value="1250" class="product-box__item">
+                        <h3 class="product-box__title">Haibike</h3>
+                        <div class="product-box__img">
+                            <img class="img-fluid" src="i/im10-min.png">
+                        </div>
+                        <div class="product-box__meta">
+                            <p>1250 $</p><button class="product-box__btn">+</button>
+
+                        </div>
+                    </div>
+                    <div data-category='bmx' value="1350" class="product-box__item">
+                        <h3 class="product-box__title">Kenda XL</h3>
+                        <div class="product-box__img">
+                            <img class="img-fluid" src="i/im11-min.png">
+                        </div>
+                        <div class="product-box__meta">
+                            <p>1350 $</p><button class="product-box__btn">+</button>
+
+                        </div>
+                    </div>
+
+
+                    <div data-category='road' value="1900" class="product-box__item">
+                        <h3 class="product-box__title">Forme Long</h3>
+                        <div class="product-box__img">
+                            <img class="img-fluid" src="i/im6-min.png">
+                        </div>
+                        <div class="product-box__meta">
+                            <p>1900 $</p><button class="product-box__btn">+</button>
+
+                        </div>
+                    </div>
+
+
+                </div><!-- /product-box-->
+
+            </section>
+        </div>
+
+        <footer class="bottom-footer bg-beetroot py-1">
+            <div class="container">
+            </div>
+        </footer>
+    </div><!-- /.app-container -->
+
+
+    <script src="/js/filter.js"></script>
+    <script src="/js/cart.js"></script>
+    <script src="/js/test.js"></script>
+</body>
+
+</html>

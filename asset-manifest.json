@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/cbikes/static/js/main.c2997e6d.js",
+    "index.html": "/cbikes/index.html",
+    "main.c2997e6d.js.map": "/cbikes/static/js/main.c2997e6d.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.c2997e6d.js"
+  ]
+}

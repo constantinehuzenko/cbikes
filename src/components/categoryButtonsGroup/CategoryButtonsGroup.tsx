@@ -3,6 +3,7 @@ import {
   StyledCategoryItem,
 } from "./CategoryButtonsGroup.style";
 
+// TODO: Move it to another file;
 export const bikeCategoryList = [
   {
     id: "all",
@@ -27,6 +28,8 @@ interface IProps {
   handleCurrentCategory: (categoryId: string) => void;
 }
 
+
+// TODO: Rename this component;
 export const CategoryButtonsGroup = ({
   currentCategory,
   handleCurrentCategory,

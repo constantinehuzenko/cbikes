@@ -24,6 +24,7 @@ export const ShoppingCart = ({ shoppingCart, removeBikeFromCart }: IProps) => {
   }
 
   return (
+    // TODO: Divide code to components;
     <StyledShoppingCart>
       <StyledScrollingList>
         {shoppingCart.map((bike) => (

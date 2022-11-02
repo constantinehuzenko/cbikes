@@ -1,0 +1,88 @@
+import { Bike, Category } from "./common/types";
+
+export const bikesList: Array<Bike> = [
+  {
+    id: "cano_one",
+    name: "Cano One",
+    category: Category.road,
+    price: 2850,
+    imgSrc: "im1-min.png",
+  },
+  {
+    id: "predator",
+    name: "Predator",
+    category: Category.bmx,
+    price: 1620,
+    imgSrc: "im12-min.png",
+  },
+  {
+    id: "canyon",
+    name: "Canyon",
+    category: Category.mountain,
+    price: 780,
+    imgSrc: "im2-min.png",
+  },
+  {
+    id: "coselo",
+    name: "Coselo",
+    category: Category.road,
+    price: 1100,
+    imgSrc: "im3-min.png",
+  },
+  {
+    id: "gt_cube",
+    name: "Gt Cube",
+    category: Category.mountain,
+    price: 450,
+    imgSrc: "im4-min.png",
+  },
+  {
+    id: "cube_axeal",
+    name: "Cube Axeal",
+    category: Category.road,
+    price: 600,
+    imgSrc: "im5-min.png",
+  },
+  {
+    id: "gt_3000",
+    name: "Gt 3000",
+    category: Category.mountain,
+    price: 320,
+    imgSrc: "im7-min.png",
+  },
+  {
+    id: "gt_one",
+    name: "Gt One",
+    category: Category.mountain,
+    price: 500,
+    imgSrc: "im8-min.png",
+  },
+  {
+    id: "gt_performer",
+    name: "Gt Perfomer",
+    category: Category.bmx,
+    price: 2200,
+    imgSrc: "im9-min.png",
+  },
+  {
+    id: "haibike",
+    name: "Haibike",
+    category: Category.mountain,
+    price: 1250,
+    imgSrc: "im10-min.png",
+  },
+  {
+    id: "kenda_xl",
+    name: "Kenda XL",
+    category: Category.bmx,
+    price: 1350,
+    imgSrc: "im11-min.png",
+  },
+  {
+    id: "forme_long",
+    name: "Forme Long",
+    category: Category.road,
+    price: 1900,
+    imgSrc: "im6-min.png",
+  },
+];

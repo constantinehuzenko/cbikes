@@ -18,7 +18,7 @@ export const App = () => {
   const { shoppingCart, addBikeToCart, removeBikeFromCart } = useShoppingCart();
 
   return (
-    <>
+    <div>
       <Header title={WEB_APP_NAME} />
       <Filter>
         <CategoryButtonsGroup
@@ -31,7 +31,10 @@ export const App = () => {
         filteredBikesList={filteredBikesList}
         addBikeToCart={addBikeToCart}
       />
-      <ShoppingCart shoppingCart={shoppingCart} removeBikeFromCart={removeBikeFromCart} />
-    </>
+      <ShoppingCart
+        shoppingCart={shoppingCart}
+        removeBikeFromCart={removeBikeFromCart}
+      />
+    </div>
   );
 };

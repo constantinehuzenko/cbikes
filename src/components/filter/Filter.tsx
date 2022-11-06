@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { memo, ReactNode } from "react";
 import styled from "styled-components";
 
 const StyledForm = styled.form`
@@ -14,6 +14,6 @@ const StyledForm = styled.form`
   }
 `;
 
-export const Filter = ({ children }: { children: ReactNode }) => (
+export const Filter = memo(({ children }: { children: ReactNode }) => (
   <StyledForm>{children}</StyledForm>
-);
+));

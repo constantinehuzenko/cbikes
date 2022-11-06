@@ -4,13 +4,14 @@ import {
   StyledPriceControlWrapper,
 } from "./PriceControl.style";
 import { DEFAULT_MAX_RANGE, DEFAULT_MIN_RANGE } from "../../common/constants";
+import { memo } from "react";
 
 interface IProps {
   maxPrice: number;
   handleMaxPrice: (maxPrice: string) => void;
 }
 
-export const PriceControl = ({ maxPrice, handleMaxPrice }: IProps) => (
+export const PriceControl = memo(({ maxPrice, handleMaxPrice }: IProps) => (
   <StyledPriceControlWrapper>
     <StyledPriceControl
       type="range"
@@ -22,4 +23,4 @@ export const PriceControl = ({ maxPrice, handleMaxPrice }: IProps) => (
 
     <StyledCount>price to {maxPrice}$</StyledCount>
   </StyledPriceControlWrapper>
-);
+));

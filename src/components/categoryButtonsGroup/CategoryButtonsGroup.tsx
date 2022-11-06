@@ -1,3 +1,4 @@
+import { memo } from "react";
 import {
   StyledCategoryWrapper,
   StyledCategoryItem,
@@ -28,31 +29,29 @@ interface IProps {
   handleCurrentCategory: (categoryId: string) => void;
 }
 
-
 // TODO: Rename this component;
-export const CategoryButtonsGroup = ({
-  currentCategory,
-  handleCurrentCategory,
-}: IProps) => (
-  <StyledCategoryWrapper>
-    {bikeCategoryList.map((category) => {
-      const isChecked = category.id === currentCategory;
+export const CategoryButtonsGroup = memo(
+  ({ currentCategory, handleCurrentCategory }: IProps) => (
+    <StyledCategoryWrapper>
+      {bikeCategoryList.map((category) => {
+        const isChecked = category.id === currentCategory;
 
-      return (
-        <StyledCategoryItem
-          key={category.id}
-          isChecked={isChecked}
-          onClick={() => handleCurrentCategory(category.id)}
-        >
-          <input
-            onChange={() => null}
-            type="radio"
-            id={category.id}
-            checked={isChecked}
-          />
-          <label>{category.name}</label>
-        </StyledCategoryItem>
-      );
-    })}
-  </StyledCategoryWrapper>
+        return (
+          <StyledCategoryItem
+            key={category.id}
+            isChecked={isChecked}
+            onClick={() => handleCurrentCategory(category.id)}
+          >
+            <input
+              onChange={() => null}
+              type="radio"
+              id={category.id}
+              checked={isChecked}
+            />
+            <label>{category.name}</label>
+          </StyledCategoryItem>
+        );
+      })}
+    </StyledCategoryWrapper>
+  )
 );

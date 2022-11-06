@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { DEFAULT_MAX_PRICE } from "../common/constants";
-import { Category, FilterState } from "../common/types";
+import { Bike, Category, FilterState } from "../common/types";
 import { bikesList } from "../data";
 
 export const useFilter = () => {
@@ -9,22 +9,37 @@ export const useFilter = () => {
     maxPrice: DEFAULT_MAX_PRICE,
   });
 
-  const filteredBikesList = bikesList.filter((bike) => {
-    const price = bike.price <= filterState.maxPrice;
-    const type =
-      bike.category === filterState.currentCategory ||
-      filterState.currentCategory === "all";
+  const filteredBikesList = useMemo(
+    () =>
+      bikesList.filter((bike) => {
+        const price = bike.price <= filterState.maxPrice;
+        const type =
+          bike.category === filterState.currentCategory ||
+          filterState.currentCategory === "all";
 
-    if (price && type) {
-      return bike;
-    }
-  });
+        if (price && type) {
+          return bike;
+        }
+      }),
+    [filterState.currentCategory, filterState.maxPrice]
+  );
 
-  const handleCurrentCategory = (categoryId: string) =>
-    setFilterState((prev) => ({ ...prev, currentCategory: categoryId }));
+  const handleCurrentCategory = useCallback(
+    (categoryId: string) =>
+      setFilterState((prev) => ({ ...prev, currentCategory: categoryId })),
+    []
+  );
 
-  const handleMaxPrice = (maxPrice: string) =>
-    setFilterState((prev) => ({ ...prev, maxPrice: Number(maxPrice) }));
+  const handleMaxPrice = useCallback(
+    (maxPrice: string) =>
+      setFilterState((prev) => ({ ...prev, maxPrice: Number(maxPrice) })),
+    []
+  );
 
-  return { filterState, filteredBikesList, handleCurrentCategory, handleMaxPrice };
+  return {
+    filterState,
+    filteredBikesList,
+    handleCurrentCategory,
+    handleMaxPrice,
+  };
 };
